@@ -1,0 +1,28 @@
+.section4{
+    background-image: linear-gradient(360deg, #050201 0%, #332C2B 49%, #737577 100%);
+    gap: 5rem;
+    padding: 10%;
+}
+
+.section4_card{
+    gap: 5rem;
+}
+
+.card_leaf{
+    top: 8%;
+    left: 45%;
+}
+.card_content{
+    
+    top: 20%;
+}
+.card_title{
+    top: 18%;
+}
+
+.card_text{
+    
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--contentTextColor);
+}

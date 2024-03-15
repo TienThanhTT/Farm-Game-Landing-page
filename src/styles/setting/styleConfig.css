@@ -1,0 +1,17 @@
+
+
+.wrapper{
+    padding: 5% 5%;
+}
+
+@media (min-width: 1400px) { 
+    .wrapper{
+        padding: 10% 15% !important;
+    }
+ }
+
+ @media (min-width: 1200px) { 
+    .wrapper{
+        padding: 5% 10%;
+    }
+ }

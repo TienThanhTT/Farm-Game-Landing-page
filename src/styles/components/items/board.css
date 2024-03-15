@@ -1,0 +1,60 @@
+.board_title{
+    top: 8%;
+}
+
+.board-title_board{
+    width: 30% !important;
+}
+
+.board-content_text{
+    width: 80%;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 15px;
+}
+
+.top-10{
+    top: 10% !important;
+}
+
+.top-5{
+    top: 5% !important;
+}
+
+.translate_right{
+    transform: translate(-35%,-50%);
+}
+
+.translate_left{
+    transform: translate(-60%, -50%);
+}
+
+
+
+
+.arrow{
+    max-width: 15%;
+    top: 40%;
+}
+
+
+
+@media (min-width: 576px) {
+    .board-content_text{
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .board-content_text{
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+@media (min-width: 992px) {
+    .board-content_text{
+        font-size: 22px;
+        line-height: 40px;
+    }
+}

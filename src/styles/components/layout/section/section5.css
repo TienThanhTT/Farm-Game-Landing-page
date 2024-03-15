@@ -1,0 +1,12 @@
+.section5{
+    background-image: url('../../../../assets/section/section5/section5_background.svg');
+    
+    background-size: cover;
+    
+}
+
+.game_item{
+    background-color: #ffffff;
+    border-radius: 40px;
+    
+}
