@@ -7,8 +7,13 @@ import ReferralSytem from "../../../assets/section/section3/feature_pic3.svg";
 import SeedShop from "../../../assets/section/section3/feature_pic4.svg";
 import MoneyTree from "../../../assets/section/section3/feature_pic5.svg";
 import AddFriend from "../../../assets/section/section3/feature_pic6.svg";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+import { fadeUp } from "../../../styles/animation/Animation";
 
 const Section3 = () => {
+  const ref = useInView();
+
   const LeftValue = [
     {
       src: TheFarm,
@@ -40,9 +45,16 @@ const Section3 = () => {
   ];
 
   return (
-    <section className=" section3 d-flex align-items-center ">
+    <motion.section
+      className=" section3 d-flex align-items-center "
+      id="WhitePaper"
+      ref={ref}
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+    >
       <div className="wrapper container-fluid row-cols-1 d-flex flex-column align-items-center justify-content-center">
-        <div className="section3_title d-flex justify-content-center w-25">
+        <div className="title-board d-flex justify-content-center">
           <TitleBoard content="Feature" />
         </div>
         <div className="section3_content w-100 d-md-flex justify-content-around py-4 gap-5">
@@ -57,7 +69,7 @@ const Section3 = () => {
             className="order-1"
           />
 
-          <div className="section3-content_left  d-flex flex-md-column py-4 gap-4 order-0 flex-wrap justify-content-center ">
+          <div className="section3-content_left  d-flex flex-md-column py-4 gap-4 order-0 flex-wrap justify-content-center">
             {LeftValue.map((item) => {
               return (
                 <FeaturePicture
@@ -69,7 +81,7 @@ const Section3 = () => {
             })}
           </div>
 
-          <div className="section3-content_right  d-flex flex-md-column py-4 gap-4 order-2 flex-wrap justify-content-center">
+          <div className="section3-content_right  d-flex flex-md-column py-4 gap-4 order-2 flex-wrap justify-content-center ">
             {RightValue.map((item) => {
               return (
                 <FeaturePicture
@@ -82,7 +94,7 @@ const Section3 = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 export default Section3;

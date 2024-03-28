@@ -1,10 +1,20 @@
 import HexagonBoard from "../../assets/section/section4/hexagon_board.svg";
 import TextTitle from "../items/TextTitle";
 import Leaf from "../../assets/section/section4/leaf.svg";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
-const HexagonCard = ({ isLeaf, title, content }) => {
+const HexagonCard = ({ isLeaf, title, content, variants }) => {
+  const ref = useInView();
+
   return (
-    <div className=" position-relative d-flex justify-content-center">
+    <motion.div
+      className=" position-relative d-flex justify-content-center"
+      ref={ref}
+      variants={variants}
+      initial="hidden"
+      whileInView="visible"
+    >
       <img
         src={HexagonBoard}
         alt="hexaBoard"
@@ -28,7 +38,7 @@ const HexagonCard = ({ isLeaf, title, content }) => {
           })}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default HexagonCard;

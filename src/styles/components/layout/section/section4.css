@@ -4,6 +4,10 @@
     padding: 10%;
 }
 
+.section4_title{
+    width: 40% !important;
+}
+
 .section4_card{
     gap: 5rem;
 }
@@ -21,8 +25,13 @@
 }
 
 .card_text{
-    
     font-size: 18px;
     font-weight: 400;
     color: var(--contentTextColor);
+}
+
+@media (min-width: 390px) {
+    .section4_title{
+        width: 30% !important;
+    }
 }

@@ -1,35 +1,16 @@
 import ContentImg from "../../assets/components/ContentBoard.svg";
-import DarkContentImg from "../../assets/components/dark_ContentBoard.svg";
-import RightArrow from "./RightArrow";
-import LeftArrow from "./LeftArrow";
 
-const ContentBoard = ({ content, isLightBoard }) => {
+const ContentBoard = ({ content }) => {
   return (
     <div className="position-relative d-flex justify-content-center align-items-center">
-      {isLightBoard ? (
-        <img
-          src={ContentImg}
-          alt="ContentBoard"
-          className=" img-fluid w-100 h-auto"
-        />
-      ) : (
-        <div className=" position-relative ">
-          <img
-            src={DarkContentImg}
-            alt="ContentBoard"
-            className=" img-fluid w-100 h-auto"
-          />
-          <div className="position-absolute arrow start-0">
-            <LeftArrow />
-          </div>
-          <div className="position-absolute arrow end-0">
-            <RightArrow />
-          </div>
-        </div>
-      )}
+      <img
+        src={ContentImg}
+        alt="ContentBoard"
+        className="d-none d-lg-block img-fluid h-auto"
+      />
 
-      <div className=" position-absolute  text-white board-content_text text-center">
-        {content}
+      <div className="board_content  text-center w-75 pt-lg-4 d-flex justify-content-center">
+        <p className="board-content_text w-100">{content}</p>
       </div>
     </div>
   );
