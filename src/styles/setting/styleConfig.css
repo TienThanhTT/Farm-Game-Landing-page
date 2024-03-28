@@ -15,3 +15,13 @@
         padding: 5% 10%;
     }
  }
+
+ .title-board{
+    width: 40% !important;
+ }
+
+ @media (min-width: 390px) { 
+    .title-board{
+        width: 30% !important;
+    }
+ }

@@ -2,10 +2,20 @@ import TextTitle from "./TextTitle";
 import woodBoard from "../../assets/components/wood_board.svg";
 import CornRight from "../../assets/components/cornRight.svg";
 import CornLeft from "../../assets/components/cornLeft.svg";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+import { fadeDown } from "../../styles/animation/Animation";
 
 const TitleBoard = ({ content }) => {
+  const ref = useInView();
   return (
-    <div className=" title_board w-100">
+    <motion.div
+      className="w-100"
+      ref={ref}
+      variants={fadeDown}
+      initial="hidden"
+      whileInView="visible"
+    >
       <div className="position-relative d-flex justify-content-center align-items-center">
         <img
           src={CornRight}
@@ -26,7 +36,7 @@ const TitleBoard = ({ content }) => {
           <TextTitle content={content} isTitle={true} />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default TitleBoard;

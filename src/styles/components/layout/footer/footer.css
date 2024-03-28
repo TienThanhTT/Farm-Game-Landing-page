@@ -4,11 +4,11 @@
     background-image: url('../../../../assets/footer/footer_down-bg.svg') ;
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: contain ;
+    background-size: contain;
 }
 
 .footer_title{
-    width: 30%;
+    width: 40%;
 }
 
 

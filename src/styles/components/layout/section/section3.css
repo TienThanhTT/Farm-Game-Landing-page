@@ -9,6 +9,10 @@
     border-width: 15px !important;
 }
 
+.section3_title{
+    width: 40% !important;
+}
+
 .section3-pic_text{
     bottom: 15%;
     left: 55%;
@@ -24,12 +28,16 @@
     line-height: 28px;
 }
 
-.section3_content{
-    
-}
 
 .section3_button{
     width: 25%;
+}
+
+@media (min-width: 390px) {
+    .section3_title{
+        width: 30% !important;
+    }
+    
 }
 
 @media (min-width: 768px) {

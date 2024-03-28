@@ -2,6 +2,9 @@ import TopBackground from "../../components/footer/TopBackground";
 import TitleBoard from "../../components/items/TitleBoard";
 import FooterContent from "../../components/footer/FooterContent";
 import Logo from "../../assets/navbar/logo.svg";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+import { fadeUp } from "../../styles/animation/Animation";
 
 const title = "Tokenomics";
 
@@ -74,11 +77,19 @@ const FooterValue = [
 ];
 
 const Footer = () => {
+  const ref = useInView();
   return (
-    <footer className="footer ">
+    <motion.footer
+      className="footer"
+      id="Tokenomics"
+      ref={ref}
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+    >
       <div className="wrapper position-relative d-flex flex-column align-items-center justify-content-center">
         <TopBackground />
-        <div className="footer_title">
+        <div className="title-board">
           <TitleBoard content={title} />
         </div>
 
@@ -94,32 +105,36 @@ const Footer = () => {
           })}
         </div>
         <div className=" d-flex justify-content-between align-items-center gap-2 gap-xxl-5 w-100 p-xxl-5">
-          <div className="footer_form">
+          <div className="footer_form d-flex flex-column align-items-center">
             <div>
               <span className="footer-form_title">Join Our Mailing List</span>
-              <p className="footer-form_text">
+              <p className="footer-form_text d-none d-sm-block">
                 Be the first to hear all the lastest MiexsFarm Game news
               </p>
             </div>
-            <div className=" d-flex gap-1 gap-sm-3 align-items-center ">
-              <div class="w-50">
-                <input
-                  type="text"
-                  className=" p-0 p-sm-2 p-xxl-3 w-100"
-                  placeholder="Name"
-                  aria-label="First name"
-                />
+
+            <div className=" d-flex flex-column flex-sm-row gap-1 gap-sm-3 align-items-center ">
+              <div className="d-flex gap-2">
+                <div>
+                  <input
+                    type="text"
+                    className=" p-1 p-sm-2 p-xxl-3 w-100"
+                    placeholder="Name"
+                    aria-label="First name"
+                  />
+                </div>
+                <div className="">
+                  <input
+                    type="text"
+                    class="p-1 p-sm-2 p-xxl-3 w-100"
+                    placeholder="Email"
+                    aria-label="Last name"
+                  />
+                </div>
               </div>
-              <div class="w-50">
-                <input
-                  type="text"
-                  class="p-0 p-sm-2 p-xxl-3 w-100"
-                  placeholder="Email"
-                  aria-label="Last name"
-                />
-              </div>
-              <div className=" footer_button p-0 p-xxl-2 w-25">
-                <button className="btn " value="Subscribe">
+
+              <div className=" footer_button p-0 p-xxl-2">
+                <button className="btn" value="Subscribe">
                   Subscribe
                 </button>
               </div>
@@ -133,7 +148,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 export default Footer;

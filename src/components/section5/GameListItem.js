@@ -1,7 +1,7 @@
 import GameItem from "./GameItem";
 const GameListItem = ({ srcImg }) => {
   return (
-    <div className="container-fluid d-flex justify-content-around flex-wrap flex-md-nowrap gap-2 gap-md-5">
+    <div className="container-fluid d-flex justify-content-around flexnowrap gap-1 gap-sm-3 gap-md-4 gap-xxl-5">
       {srcImg.map((item) => {
         return <GameItem srcImg={item} key={item} />;
       })}
