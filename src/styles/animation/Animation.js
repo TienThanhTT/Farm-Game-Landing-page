@@ -1,26 +1,26 @@
 export const fadeIn = {
   hidden: { opacity: 0, x: "-50%" },
-  visible: { opacity: 1, x: 0, trasition: { duration: 1.5 } },
+  visible: { opacity: 1, x: 0 },
 };
 
 export const fadeOut = {
   hidden: { opacity: 0, x: "50%" },
-  visible: { opacity: 1, x: 0, trasition: { duration: 1.5 } },
+  visible: { opacity: 1, x: 0 },
 };
 
 export const fadeUp = {
   hidden: { opacity: 0, y: 100 },
-  visible: { opacity: 1, y: 0, trasition: { duration: 1 } },
+  visible: { opacity: 1, y: 0 },
 };
 
 export const fadeDown = {
   hidden: { opacity: 0, y: -100 },
-  visible: { opacity: 1, y: 0, trasition: { duration: 1 } },
+  visible: { opacity: 1, y: 0 },
 };
 
 export const appear = {
   hidden: { opacity: 0, scale: 0 },
-  visible: { opacity: 1, scale: 1, trasition: { duration: 0.3 } },
+  visible: { opacity: 1, scale: 1 },
 };
 
 export const slideVariants = {
@@ -41,6 +41,6 @@ export const slideVariants = {
   },
   exit: {
     scale: 0,
-    trasition: { duration: 1 },
+    transition: { duration: 1 },
   },
 };
