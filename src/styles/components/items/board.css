@@ -12,8 +12,8 @@
 
 .board-content_text{
     max-width: 793px;
-    font-size: 22px;
-    line-height: 40px;
+    font-size: 16px;
+    line-height: 35px;
     font-weight: 400;
     /* word-wrap: break-word; */
 }
@@ -39,6 +39,7 @@
 .arrow{
     max-width: 15%;
     top: 40%;
+    
 }
 
 
@@ -54,7 +55,13 @@
         position: absolute;
         margin-top: 0;
         color: var(--contentTextColor);
-        
+    }
+
+    .board-content_text{
+        font-size: 22px;
+        line-height: 40px;
+
+        /* word-wrap: break-word; */
     }
 }
 

@@ -1,18 +1,18 @@
 
 
 .wrapper{
-    padding: 5% 5%;
+    padding: 7% 0;
 }
 
 @media (min-width: 1400px) { 
     .wrapper{
-        padding: 10% 15% !important;
+        padding: 10% 0 !important;
     }
  }
 
  @media (min-width: 1200px) { 
     .wrapper{
-        padding: 5% 10%;
+        padding: 5% 0;
     }
  }
 

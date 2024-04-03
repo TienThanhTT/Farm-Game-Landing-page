@@ -1,15 +1,11 @@
 .header{
     background-color: #fefdf3;
-    padding: 0 10% !important;
-
 }
 
-.navbar_logo{
-    width: 15%;
-}
-
-.nav-item{
-    font-size: 14px;
+ 
+.nav_item{
+    font-size: 20px !important;
+    color: #00231D !important;
 }
 
 @media (min-width: 768px) {

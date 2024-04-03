@@ -1,4 +1,4 @@
-import ContentImg from "../../assets/components/ContentBoard.svg";
+import ContentImg from "../../assets/components/ContentBoard.png";
 
 const ContentBoard = ({ content }) => {
   return (

@@ -1,7 +1,7 @@
 import TopBackground from "../../components/footer/TopBackground";
 import TitleBoard from "../../components/items/TitleBoard";
 import FooterContent from "../../components/footer/FooterContent";
-import Logo from "../../assets/navbar/logo.svg";
+import Logo from "../../assets/navbar/logo.png";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { fadeUp } from "../../styles/animation/Animation";
@@ -64,12 +64,12 @@ const FooterValue = [
     content: [
       {
         name: "Slip buy: ",
-        title: "0%",
+        value: "0%",
         isLine: true,
       },
       {
         name: "Slip sell: ",
-        title: "0%",
+        value: "0%",
         isLine: false,
       },
     ],
@@ -80,31 +80,32 @@ const Footer = () => {
   const ref = useInView();
   return (
     <motion.footer
-      className="footer"
+      className="footer position-relative"
       id="Tokenomics"
       ref={ref}
       variants={fadeUp}
       initial="hidden"
       whileInView="visible"
     >
-      <div className="wrapper position-relative d-flex flex-column align-items-center justify-content-center">
-        <TopBackground />
-        <div className="title-board">
+      <TopBackground />
+      <div className="wrapper container d-flex gap-5 flex-column align-items-center justify-content-center mx-auto">
+        <div className=" col-7 col-md-5 col-xl-3">
           <TitleBoard content={title} />
         </div>
 
-        <div className="col d-flex w-100 flex-column flex-sm-row justify-content-around py-sm-4 py-xxl-5 px-xxl-5">
-          {FooterValue.map((item) => {
+        <div className=" row w-100 justify-content-between">
+          {FooterValue.map((item, index) => {
             return (
               <FooterContent
                 title={item.title}
                 content={item.content}
-                key={item.title}
+                footerkey={index}
+                key={index}
               />
             );
           })}
         </div>
-        <div className=" d-flex justify-content-between align-items-center gap-2 gap-xxl-5 w-100 p-xxl-5">
+        <div className=" d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 gap-xxl-5 w-100 p-xxl-5">
           <div className="footer_form d-flex flex-column align-items-center">
             <div>
               <span className="footer-form_title">Join Our Mailing List</span>
@@ -126,7 +127,7 @@ const Footer = () => {
                 <div className="">
                   <input
                     type="text"
-                    class="p-1 p-sm-2 p-xxl-3 w-100"
+                    className="p-1 p-sm-2 p-xxl-3 w-100"
                     placeholder="Email"
                     aria-label="Last name"
                   />

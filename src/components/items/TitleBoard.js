@@ -1,7 +1,7 @@
 import TextTitle from "./TextTitle";
-import woodBoard from "../../assets/components/wood_board.svg";
-import CornRight from "../../assets/components/cornRight.svg";
-import CornLeft from "../../assets/components/cornLeft.svg";
+import woodBoard from "../../assets/components/wood_board.png";
+import CornRight from "../../assets/components/cornRight.png";
+import CornLeft from "../../assets/components/cornLeft.png";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { fadeDown } from "../../styles/animation/Animation";

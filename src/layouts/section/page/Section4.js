@@ -76,25 +76,26 @@ const Section4 = () => {
   ];
 
   return (
-    <section
-      className="wrapper section4 d-flex flex-column align-items-center justify-content-center"
-      id="Roadmap"
-    >
-      <div className="title-board">
-        <TitleBoard content="Roadmap" />
-      </div>
-      <div className="section4_card d-flex  flex-wrap justify-content-center align-items-center">
-        {CardTitle.map((item) => {
-          return (
-            <HexagonCard
-              isLeaf={item.isLeaf}
-              title={item.title}
-              content={item.CardValue}
-              key={item.title}
-              variants={item.variant}
-            />
-          );
-        })}
+    <section className="section4" id="Roadmap">
+      <div className="wrapper container d-flex flex-column align-items-center justify-content-center gap-5">
+        <div className=" col-8 col-md-5 col-xl-3">
+          <TitleBoard content="Roadmap" />
+        </div>
+        <div className="d-flex justify-content-center justify-content-xxl-between flex-wrap gap-3">
+          {CardTitle.map((item) => {
+            return (
+              <div className="section4_card" key={item.title}>
+                <HexagonCard
+                  isLeaf={item.isLeaf}
+                  title={item.title}
+                  content={item.CardValue}
+                  key={item.title}
+                  variants={item.variant}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

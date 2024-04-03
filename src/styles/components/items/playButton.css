@@ -1,3 +1,7 @@
+.play_button{
+    max-width: 116px;
+}
+
 .translate_middle{
     transform: translateY(-15%);
 }

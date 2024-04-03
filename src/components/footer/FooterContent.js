@@ -1,28 +1,26 @@
 import Line from "../items/Line";
-const FooterContent = ({ title, content, isLine }) => {
+const FooterContent = ({ title, content, isLine, footerkey }) => {
   return (
-    <div className=" d-flex flex-column col-xxl-3">
-      <span className=" text-uppercase footerContent_title text-center p-4 p-xxl-5">
-        {title}
-      </span>
-      {content.map((item) => {
+    <div className=" d-flex flex-column col-md-3" key={footerkey}>
+      <span className=" text-uppercase text-center pb-3">{title}</span>
+      {content.map((item, index) => {
         return (
-          <>
+          <div key={index}>
             {(isLine = item.isLine)}
             {isLine ? (
-              <p key={item.name}>
+              <div className="mb-3">
                 {item.name}
                 <span className="font-weight-normal">{item.value}</span>
 
                 <Line />
-              </p>
+              </div>
             ) : (
-              <p key={item.name}>
+              <div className="mb-3" key={index}>
                 {item.name}
                 <span className="font-weight-normal">{item.value}</span>
-              </p>
+              </div>
             )}
-          </>
+          </div>
         );
       })}
     </div>

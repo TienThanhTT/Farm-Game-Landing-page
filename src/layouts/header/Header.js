@@ -1,6 +1,7 @@
 import React from "react";
 import NavbarLogo from "../../components/header/NavbarLogo";
-import PlayButton from "../../components/items/PlayButton";
+import PlayButton from "../../assets/components/play_button.png";
+import "../../styles/components/layout/header/header.css";
 
 import { Nav, Navbar } from "react-bootstrap";
 
@@ -14,31 +15,33 @@ const Header = () => {
   ];
 
   return (
-    <div className="container-fluid header py-xxl-3 position-fixed z-1">
-      <header className="">
-        <Navbar expand="lg" className=" d-flex justify-content-between">
-          <section className="navbar_logo">
+    <header className="header position-fixed w-100 z-1">
+      <div className="container">
+        <Navbar expand="lg" className=" row">
+          <section className=" col-3 col-lg-2">
             <a href="#topPage">
               <NavbarLogo />
             </a>
           </section>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" className="col-2" />
           <Navbar.Collapse
             id="basic-navbar-nav"
-            className=" justify-content-evenly"
+            className=" justify-content-center col-8"
           >
-            <Nav className="text-center">
+            <Nav className="navbar">
               {NavbarItems.map((item) => (
-                <Nav.Link href={item.url}>{item.name}</Nav.Link>
+                <Nav.Link href={item.url} key={item.url} className="nav_item">
+                  {item.name}
+                </Nav.Link>
               ))}
             </Nav>
           </Navbar.Collapse>
-          <section className="header_button d-none d-lg-block">
-            <PlayButton content="Play" />
-          </section>
+          <div className=" d-none d-lg-flex justify-content-end col-2">
+            <img alt="" src={PlayButton} />
+          </div>
         </Navbar>
-      </header>
-    </div>
+      </div>
+    </header>
   );
 };
 

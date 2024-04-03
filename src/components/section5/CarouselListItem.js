@@ -1,8 +1,8 @@
 import { useState } from "react";
 import CarouselItem from "./CarouselItem";
-import DarkContentImg from "../../assets/components/dark_ContentBoard.svg";
-import RightArrow from "../../components/items/RightArrow";
-import LeftArrow from "../../components/items/LeftArrow";
+import DarkContentImg from "../../assets/components/dark_ContentBoard.png";
+import RightArrow from "../../assets/components/right_arrow.png";
+import LeftArrow from "../../assets/components/left_arrow.png";
 import TitleBoard from "../../components/items/TitleBoard";
 import { slideVariants } from "../../styles/animation/Animation";
 import { useInView } from "react-intersection-observer";
@@ -45,7 +45,11 @@ const CarouselListItem = ({ item, title }) => {
         initial="hidden"
         whileInView="visible"
       >
-        <LeftArrow />
+        <img
+          src={LeftArrow}
+          alt="leftArrow"
+          className=" img-fluid w-100 h-auto"
+        />
       </motion.div>
       <motion.div
         className="position-absolute arrow end-0"
@@ -55,9 +59,13 @@ const CarouselListItem = ({ item, title }) => {
         initial="hidden"
         whileInView="visible"
       >
-        <RightArrow />
+        <img
+          src={RightArrow}
+          alt="leftArrow"
+          className=" img-fluid w-100 h-auto"
+        />
       </motion.div>
-      <div className="board-title_board position-absolute top-10 start-50 translate-middle">
+      <div className="d-none d-lg-block position-absolute top-10 start-50 translate-middle">
         <TitleBoard content={title} />
       </div>
       <div className="section5-img_slideShow position-absolute text-center w-75 pt-lg-4 d-flex justify-content-center">

@@ -13,7 +13,7 @@ import "../styles/components/items/line.css";
 
 function App() {
   return (
-    <div className="container-fluid App">
+    <div className="App">
       <Header />
       <Home />
       <Footer />

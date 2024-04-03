@@ -1,6 +1,6 @@
-import HexagonBoard from "../../assets/section/section4/hexagon_board.svg";
+import HexagonBoard from "../../assets/section/section4/hexagon_board.png";
 import TextTitle from "../items/TextTitle";
-import Leaf from "../../assets/section/section4/leaf.svg";
+import Leaf from "../../assets/section/section4/leaf.png";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -25,7 +25,7 @@ const HexagonCard = ({ isLeaf, title, content, variants }) => {
       </div>
       {isLeaf ? (
         <div className=" position-absolute card_leaf translate-middle">
-          <img src={Leaf} alt="Leaf" />
+          <img src={Leaf} alt="Leaf" className="w-100" />
         </div>
       ) : (
         <></>

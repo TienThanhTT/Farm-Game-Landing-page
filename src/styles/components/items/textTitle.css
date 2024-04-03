@@ -1,5 +1,5 @@
 .title{
-    font-size: 15px;
+    font-size: 30px;
 }
 
 .content{
@@ -14,35 +14,12 @@
     text-shadow:  2px 1px 0px #0000004D;
 
 }
-@media (min-width: 576px) {
-    .title{
-        font-size: 20px;
-    }
 
-
-
-}
-@media (min-width: 768px) {
-    .title{
-        font-size: 30px;
-    }
-    .content{
-        font-size: 13px;
-    }
-}
 @media (min-width: 990px) {
-    .content{
-        font-size: 16px;
-    }
-}
-
-@media (min-width: 1200px) {
     .title{
         font-size: 38px;
     }
-
-    .content{
-        font-size: 20px;
-    }
 }
+
+
 

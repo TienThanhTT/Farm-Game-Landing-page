@@ -1,5 +1,5 @@
 import TextTitle from "./TextTitle";
-import img from "../../assets/components/bg_button.svg";
+import img from "../../assets/components/bg_button.png";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { fadeUp } from "../../styles/animation/Animation";
@@ -8,7 +8,7 @@ const PlayButton = ({ content }) => {
   const ref = useInView();
   return (
     <motion.div
-      className=" w-75 position-relative d-flex justify-content-center align-items-center"
+      className=" play_button position-relative d-flex justify-content-center align-items-center"
       ref={ref}
       variants={fadeUp}
       initial="hidden"

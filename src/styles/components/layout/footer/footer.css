@@ -1,19 +1,16 @@
 .footer{
     background-color: #519316;
     color: var(--contentTextColor);
-    background-image: url('../../../../assets/footer/footer_down-bg.svg') ;
+    background-image: url('../../../../assets/footer/footer_down-bg.png') ;
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
 }
 
-.footer_title{
-    width: 40%;
-}
 
 
 .footer-form_title{
-    font-size: 20px;
+    font-size: 32px;
     font-weight: 400;
 }
 
@@ -25,19 +22,4 @@
     background-color: var(--footerButtonColor);  
 }
 
-@media (min-width: 768px) {
-    .footer-form_title{
-        font-size: 32px;
-        font-weight: 400;
-    }
 
-    .footer-form_text{
-        font-size: 13px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .navbar_logo{
-        width: 10%;
-    }
-}

@@ -1,31 +1,32 @@
 .section1{
-    background-image: url('../../../../assets//section/section1/section1-background.svg');
+    background-image: url('../../../../assets//section/section1/background.png');
     height: 50vh;
     background-size: cover;
     background-position: center;
 }
 .section1_text{
-    font-size: 10px;
+    font-size: 25px;
     font-weight: 400;
     color: #85B610;
 }
 
 
-
+@media (min-width: 576px) {
+    .section1_text{
+        font-size: 35px;
+    }
+}
 @media (min-width: 768px) {
 
     .section1{
         height: 70vh;
     }
+
     .section1_text{
-        font-size: 25px;
-        font-weight: 400;
-        color: #85B610;
+        font-size: 48px;
     }
 }
-@media (min-width: 1200px) {
-    
-}
+
 @media (min-width: 1400px) {
     .section1{
         height: 101vh;

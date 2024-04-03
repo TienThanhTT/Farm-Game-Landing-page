@@ -1,6 +1,5 @@
 .section3{
-    background-image: url('../../../../assets/section/section3/section3_background.svg');
-    
+    background-image: url('../../../../assets/section/section3/background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,23 +14,17 @@
 
 .section3-pic_text{
     bottom: 15%;
-    left: 55%;
+    left: 50%;
 }
 
 .section3-content_middle{
-    width: 80%;
-    margin: auto;
     background-color: #000000CC;
     color: var(--contentTextColor);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 28px;
 }
 
-
-.section3_button{
-    width: 25%;
-}
 
 @media (min-width: 390px) {
     .section3_title{
@@ -47,9 +40,6 @@
     }
     .pic_border{
         border: #ffffff solid 1px;
-    }
-    .section3-content_middle{
-        max-width: 30% !important;
     }
 
     .section3_button{
