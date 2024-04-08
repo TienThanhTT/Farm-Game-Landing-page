@@ -1,6 +1,7 @@
 import React from "react";
 import NavbarLogo from "../../components/header/NavbarLogo";
-import PlayButton from "../../assets/components/play_button.png";
+import PlayButton from "../../components/items/PlayButton";
+
 import "../../styles/components/layout/header/header.css";
 
 import { Nav, Navbar } from "react-bootstrap";
@@ -13,6 +14,8 @@ const Header = () => {
     { name: "Roadmap", url: "#Roadmap" },
     { name: "Tokenomics", url: "#Tokenomics" },
   ];
+
+  const buttonUrl = "https://farms.miexs.com/";
 
   return (
     <header className="header position-fixed w-100 z-1">
@@ -37,7 +40,7 @@ const Header = () => {
             </Nav>
           </Navbar.Collapse>
           <div className=" d-none d-lg-flex justify-content-end col-2">
-            <img alt="" src={PlayButton} />
+            <PlayButton url={buttonUrl} />
           </div>
         </Navbar>
       </div>

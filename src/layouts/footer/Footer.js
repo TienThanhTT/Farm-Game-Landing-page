@@ -14,12 +14,12 @@ const FooterValue = [
     content: [
       {
         name: "Total Supply: ",
-        value: "1,000,000 SFarm",
+        value: "1,000,000 MGT",
         isLine: true,
       },
       {
         name: "Total Supply: ",
-        value: "1,000,000 SFarm",
+        value: "1,000,000 MGT",
         isLine: true,
       },
       {

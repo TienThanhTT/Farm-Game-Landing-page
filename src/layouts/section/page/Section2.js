@@ -22,13 +22,13 @@ const Section2 = () => {
           <Board
             title="About us"
             isLightBoard={true}
-            content="Welcome to the digital farm game on the SOLFARM, where every blade of
+            content="Welcome to the digital farm game on the MIEXSFARM, where every blade of
         grass sprouting becomes an exciting money-making opportunity. With
-        SOLFARM, you can mine coins, expand your farm, and create unique NFTs
+        MIEXSFARM, you can mine coins, expand your farm, and create unique NFTs
         with each success. Join now to explore the vibrant world of
         Play-to-Earn, where creativity and earning money blend seamlessly. Make
-        sure you're ready to elevate your farm to new heights on the SOL
-        platform! CA: BjBzvw6VX7UJtrC7BaYLG1dHBiwrXP1T9j2YfDEdP4zU"
+        sure you're ready to elevate your farm to new heights on the EVM
+        platform! CA: 0x80921F1Aa330Dbc99196951d79924545a0e7aB7D"
           ></Board>
         </motion.div>
       </div>

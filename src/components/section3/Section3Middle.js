@@ -1,5 +1,6 @@
 import PlayButton from "../items/PlayButton";
 const Section3Middle = ({ content1, content2 }) => {
+  const buttonUrl = "https://farms.miexs.com/";
   return (
     <div className="section3-content_middle text-center d-flex align-items-center flex-column py-5">
       <div className=" p-2 p-md-2 p-lg-5 section3_content">
@@ -8,7 +9,7 @@ const Section3Middle = ({ content1, content2 }) => {
       </div>
 
       <div className="d-flex justify-content-center section3_button">
-        <PlayButton content="Play" />
+        <PlayButton url={buttonUrl} />
       </div>
     </div>
   );
