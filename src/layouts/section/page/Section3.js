@@ -60,7 +60,7 @@ const Section3 = () => {
           </div>
 
           <div className="row align-items-center justify-content-center">
-            <div className="section3_content col-8 col-xl-4 justify-content-around d-block d-xl-none">
+            <div className="section3_content col-10 col-xl-4 justify-content-around d-block d-xl-none">
               <Section3Middle
                 content1="Experience a journey where every action is not just about managing a farm, 
               but also an exciting opportunity to earn money. Particularly, the combination of features such as The Farm, 
@@ -72,7 +72,7 @@ const Section3 = () => {
                 className="order-1"
               />
             </div>
-            <div className="col-8 col-xl-4 py-4 d-flex gap-4 flex-column">
+            <div className="col-10 col-xl-4 py-4 d-flex gap-4 flex-column">
               {LeftValue.map((item) => {
                 return (
                   <FeaturePicture
@@ -84,7 +84,7 @@ const Section3 = () => {
               })}
             </div>
 
-            <div className="section3_content col-8 col-xl-4 justify-content-around d-none d-xl-block">
+            <div className="section3_content col-10 col-xl-4 justify-content-around d-none d-xl-block">
               <Section3Middle
                 content1="Experience a journey where every action is not just about managing a farm, 
               but also an exciting opportunity to earn money. Particularly, the combination of features such as The Farm, 
@@ -97,7 +97,7 @@ const Section3 = () => {
               />
             </div>
 
-            <div className="section3-content_right col-8 col-xl-4 py-4 d-flex gap-4 flex-column">
+            <div className="section3-content_right col-10 col-xl-4 py-4 d-flex gap-4 flex-column">
               {RightValue.map((item) => {
                 return (
                   <FeaturePicture

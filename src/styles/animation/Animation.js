@@ -14,8 +14,8 @@ export const fadeUp = {
 };
 
 export const fadeDown = {
-  hidden: { opacity: 0, y: -100 },
-  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: [-100, 0] },
 };
 
 export const appear = {

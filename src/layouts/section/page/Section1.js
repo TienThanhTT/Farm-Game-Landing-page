@@ -16,7 +16,7 @@ const Section1 = () => {
           initial="hidden"
           whileInView="visible"
         >
-          <div className=" col-7 col-sm-4 col-lg-12 d-flex flex-column align-items-center">
+          <div className=" col-7 col-lg-12 d-flex flex-column align-items-center">
             <div className="section1_text text-center">Welcome to</div>
             <img alt="" src={Img} className=" img-fluid" />
           </div>
