@@ -5,13 +5,14 @@ const GameItem = ({ srcImg }) => {
   const ref = useInView();
   return (
     <motion.div
-      className="game_item p-0 p-md-2 border  border-5 border-opacity-10 "
+      className=" bg-item_background w-[120px] h-[122px] flex items-center justify-center overflow-x-scroll"
       ref={ref}
       variants={fadeUp}
       initial="hidden"
       whileInView="visible"
+      transition={{ type: "spring", stiffness: 200 }}
     >
-      <img src={srcImg} alt="" className=" img-fluid w-100 h-auto" />
+      <img src={srcImg} alt="" className=" " />
     </motion.div>
   );
 };

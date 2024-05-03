@@ -1,5 +1,3 @@
-import TextTitle from "./TextTitle";
-import img from "../../assets/components/bg_button.png";
 import button from "../../assets/components/play_button.png";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";

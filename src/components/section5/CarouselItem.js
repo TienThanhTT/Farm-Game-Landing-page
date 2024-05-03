@@ -1,10 +1,12 @@
 const CarouselItem = ({ item }) => {
   return (
-    <div className=" d-flex flex-wrap w-100 justify-content-center">
-      <img alt="" src={item} className="img-fluid w-50" />
-      <img alt="" src={item} className="img-fluid w-50" />
-      <img alt="" src={item} className="img-fluid w-50" />
-    </div>
+    <>
+      <div className=" flex flex-wrap max-w-[359px] items-center justify-center">
+        <img alt="" src={item} className="w-[158px] hidden md:block" />
+        <img alt="" src={item} className="w-[158px]" />
+        <img alt="" src={item} className="w-[158px]" />
+      </div>
+    </>
   );
 };
 export default CarouselItem;

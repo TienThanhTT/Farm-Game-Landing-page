@@ -1,5 +1,5 @@
-import TitleBoard from "../../../components/items/TitleBoard";
-import HexagonCard from "../../../components/section4/HexagonCard";
+import Card from "../../../components/section4/Card";
+import Title from "../../../components/title";
 import { fadeDown, fadeUp } from "../../../styles/animation/Animation";
 const Section4 = () => {
   const CardTitle = [
@@ -76,16 +76,19 @@ const Section4 = () => {
   ];
 
   return (
-    <section className="section4" id="Roadmap">
-      <div className="wrapper container d-flex flex-column align-items-center justify-content-center gap-5">
-        <div className=" col-8 col-md-5 col-xl-3">
-          <TitleBoard content="Roadmap" />
+    <section
+      className=" bg-section4 bg-center bg-cover py-8 lg:py-0 lg:h-[1260px] flex items-center justify-center"
+      id="Roadmap"
+    >
+      <div className="container flex flex-col gap-12 ">
+        <div className=" flex justify-center items-center">
+          <Title title={"Road map"} />
         </div>
-        <div className="d-flex justify-content-center justify-content-xxl-between flex-wrap gap-3">
+        <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-4">
           {CardTitle.map((item) => {
             return (
-              <div className="section4_card" key={item.title}>
-                <HexagonCard
+              <div className=" col-span-4 max-w-[340px]" key={item.title}>
+                <Card
                   isLeaf={item.isLeaf}
                   title={item.title}
                   content={item.CardValue}

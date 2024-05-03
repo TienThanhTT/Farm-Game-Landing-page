@@ -1,5 +1,5 @@
 import Img from "../../../assets/section/section1/Miexs_img.png";
-import "../../../styles/components/layout/section/section1.css";
+
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { appear } from "../../../styles/animation/Animation";
@@ -7,21 +7,23 @@ import { appear } from "../../../styles/animation/Animation";
 const Section1 = () => {
   const ref = useInView();
   return (
-    <section className="section1 d-flex align-items-center" id="topPage">
-      <div className="container">
-        <motion.div
-          className=" wrapper d-flex flex-column justify-content-center align-items-center row"
-          ref={ref}
-          variants={appear}
-          initial="hidden"
-          whileInView="visible"
-        >
-          <div className=" col-7 col-lg-12 d-flex flex-column align-items-center">
-            <div className="section1_text text-center">Welcome to</div>
-            <img alt="" src={Img} className=" img-fluid" />
-          </div>
-        </motion.div>
-      </div>
+    <section
+      className=" bg-section1 bg-center bg-cover h-[80vh] lg:h-[100vh]"
+      id="topPage"
+    >
+      <motion.div
+        className=" container h-full flex flex-col gap-4 lg:gap-8 justify-center items-center"
+        ref={ref}
+        variants={appear}
+        initial="hidden"
+        transition={{ type: "spring", stiffness: 200 }}
+        whileInView="visible"
+      >
+        <div className=" text-center text-[30px] lg:text-[48px] leading-[40px]">
+          Welcome to
+        </div>
+        <img alt="" src={Img} className=" max-w-[250px] lg:max-w-[468px]" />
+      </motion.div>
     </section>
   );
 };

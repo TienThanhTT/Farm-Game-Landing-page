@@ -1,6 +1,5 @@
-import TitleBoard from "../../../components/items/TitleBoard";
-import Section3Middle from "../../../components/section3/Section3Middle";
-import FeaturePicture from "../../../components/section3/FeaturePicture";
+import Button_img from "../../../assets/components/play_button.png";
+import FeaturePicture from "../../../components/section3/Feature";
 import TheFarm from "../../../assets/section/section3/feature_pic1.png";
 import StoreHouse from "../../../assets/section/section3/feature_pic2.png";
 import ReferralSytem from "../../../assets/section/section3/feature_pic3.png";
@@ -10,100 +9,111 @@ import AddFriend from "../../../assets/section/section3/feature_pic6.png";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { fadeUp } from "../../../styles/animation/Animation";
+import Title from "../../../components/title";
+import Feature from "../../../components/section3/Feature";
 
 const Section3 = () => {
-  const ref = useInView();
-
   const LeftValue = [
     {
       src: TheFarm,
-      text: "The Farm",
+      title: "The Farm",
+      comming: false,
     },
     {
       src: StoreHouse,
-      text: "Store House",
+      title: "Store House",
+      comming: false,
     },
     {
       src: ReferralSytem,
-      text: "Referral Sytem",
+      title: "Referral Sytem",
+      comming: true,
     },
   ];
 
   const RightValue = [
     {
       src: SeedShop,
-      text: "Seed Shop",
+      title: "Seed Shop",
+      comming: false,
     },
     {
       src: MoneyTree,
-      text: "Money Tree",
+      title: "Money Tree",
+      comming: true,
     },
     {
       src: AddFriend,
-      text: "Add Friend",
+      title: "Add Friend",
+      comming: true,
     },
   ];
 
   return (
-    <motion.section
-      className=" section3"
+    <section
+      className=" bg-section3 bg-cover bg-center py-8 lg:h-[1107px] lg:py-0 "
       id="WhitePaper"
-      ref={ref}
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="visible"
     >
-      <div className="container">
-        <div className=" d-flex flex-column align-items-center justify-content-center gap-5 wrapper">
-          <div className=" col-7 col-md-5 col-xl-3 d-flex justify-content-center">
-            <TitleBoard content="Feature" />
+      <div className="container flex h-full items-center">
+        <div className=" flex flex-col gap-12">
+          <div className=" flex justify-center items-center">
+            <Title title={"Features"} />
           </div>
 
-          <div className="row align-items-center justify-content-center">
-            <div className="section3_content col-10 col-xl-4 justify-content-around d-block d-xl-none">
-              <Section3Middle
-                content1="Experience a journey where every action is not just about managing a farm, 
-              but also an exciting opportunity to earn money. Particularly, the combination of features such as The Farm, 
-              Money Tree, Seed Shop, Store House, and Referral System brings a unique and multi-dimensional gaming 
-              experience. "
-                content2="And don't miss out on upcoming features like Visit Friend's Farm, Live Stock, Add Friend, 
-              Farm Expansion, and Piggy Bank, promising to enrich your farming adventure. Get ready to explore our world 
-              and start your Play-to-Earn journey today!"
-                className="order-1"
-              />
+          <div className=" grid grid-cols-4  md:grid-cols-8 lg:grid-cols-12 gap-8">
+            <div className=" lg:hidden col-span-4 md:col-span-8 bg-black bg-opacity-80 text-white flex flex-col justify-center items-center gap-12 py-16">
+              <p className=" text-lg text-center leading-[28px] lg:max-w-[320px] m-auto ">
+                Experience a journey where every action is not just about
+                managing a farm, but also an exciting opportunity to earn money.
+                Particularly, the combination of features such as The Farm,
+                Money Tree, Seed Shop, Store House, and Referral System brings a
+                unique and multi-dimensional gaming experience.
+                <br /> <br /> And don't miss out on upcoming features like Visit
+                Friend's Farm, Live Stock, Add Friend, Farm Expansion, and Piggy
+                Bank, promising to enrich your farming adventure. Get ready to
+                explore our world and start your Play-to-Earn journey today!
+              </p>
+              <div className="flex justify-center items-center">
+                <img src={Button_img} alt="" />
+              </div>
             </div>
-            <div className="col-10 col-xl-4 py-4 d-flex gap-4 flex-column">
+            <div className="col-span-4 flex flex-col gap-8 justify-center">
               {LeftValue.map((item) => {
                 return (
-                  <FeaturePicture
+                  <Feature
                     key={item.src}
-                    src={item.src}
-                    text={item.text}
+                    img={item.src}
+                    comming={item.comming}
+                    title={item.title}
                   />
                 );
               })}
             </div>
-
-            <div className="section3_content col-10 col-xl-4 justify-content-around d-none d-xl-block">
-              <Section3Middle
-                content1="Experience a journey where every action is not just about managing a farm, 
-              but also an exciting opportunity to earn money. Particularly, the combination of features such as The Farm, 
-              Money Tree, Seed Shop, Store House, and Referral System brings a unique and multi-dimensional gaming 
-              experience. "
-                content2="And don't miss out on upcoming features like Visit Friend's Farm, Live Stock, Add Friend, 
-              Farm Expansion, and Piggy Bank, promising to enrich your farming adventure. Get ready to explore our world 
-              and start your Play-to-Earn journey today!"
-                className="order-1"
-              />
+            <div className=" hidden lg:flex lg:col-span-4 bg-black bg-opacity-80 text-white flex-col justify-center items-center gap-12 py-16">
+              <p className=" text-lg text-center leading-[28px] lg:max-w-[320px] m-auto ">
+                Experience a journey where every action is not just about
+                managing a farm, but also an exciting opportunity to earn money.
+                Particularly, the combination of features such as The Farm,
+                Money Tree, Seed Shop, Store House, and Referral System brings a
+                unique and multi-dimensional gaming experience.
+                <br /> <br /> And don't miss out on upcoming features like Visit
+                Friend's Farm, Live Stock, Add Friend, Farm Expansion, and Piggy
+                Bank, promising to enrich your farming adventure. Get ready to
+                explore our world and start your Play-to-Earn journey today!
+              </p>
+              <div className="flex justify-center items-center">
+                <img src={Button_img} alt="" />
+              </div>
             </div>
 
-            <div className="section3-content_right col-10 col-xl-4 py-4 d-flex gap-4 flex-column">
+            <div className=" col-span-4 flex flex-col gap-8 justify-center">
               {RightValue.map((item) => {
                 return (
-                  <FeaturePicture
+                  <Feature
                     key={item.src}
-                    src={item.src}
-                    text={item.text}
+                    img={item.src}
+                    comming={item.comming}
+                    title={item.title}
                   />
                 );
               })}
@@ -111,7 +121,7 @@ const Section3 = () => {
           </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 export default Section3;

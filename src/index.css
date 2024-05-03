@@ -1,3 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .font-outline {
+    -webkit-text-stroke: 1.5px #783E08;
+  }
+  .font-outline-green {
+    -webkit-text-stroke: 1px #2FE863;
+  }
+  
+}
+
 body {
   margin: 0;
   font-family: "Rowdies", sans-serif !important;
@@ -6,8 +20,6 @@ body {
 
 
 }
-
-
 
 .rowdies-light {
   font-family: "Rowdies", sans-serif;
