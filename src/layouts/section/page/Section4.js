@@ -87,7 +87,10 @@ const Section4 = () => {
         <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-4">
           {CardTitle.map((item) => {
             return (
-              <div className=" col-span-4 max-w-[340px]" key={item.title}>
+              <div
+                className=" col-span-4 max-w-[340px] flex justify-center"
+                key={item.title}
+              >
                 <Card
                   isLeaf={item.isLeaf}
                   title={item.title}

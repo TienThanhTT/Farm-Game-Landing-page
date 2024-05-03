@@ -4,6 +4,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
+        header:
+          "linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 74.5%, rgba(255, 255, 255, 0) 100%)",
+
         title_background: "url('/src/assets/components/title-background.png')",
 
         section1: "url('/src/assets/section/section1/background.png')",

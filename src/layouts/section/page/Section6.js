@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Title from "../../../components/title";
 
 const Layout = [

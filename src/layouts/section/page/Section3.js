@@ -1,14 +1,10 @@
 import Button_img from "../../../assets/components/play_button.png";
-import FeaturePicture from "../../../components/section3/Feature";
 import TheFarm from "../../../assets/section/section3/feature_pic1.png";
 import StoreHouse from "../../../assets/section/section3/feature_pic2.png";
 import ReferralSytem from "../../../assets/section/section3/feature_pic3.png";
 import SeedShop from "../../../assets/section/section3/feature_pic4.png";
 import MoneyTree from "../../../assets/section/section3/feature_pic5.png";
 import AddFriend from "../../../assets/section/section3/feature_pic6.png";
-import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
-import { fadeUp } from "../../../styles/animation/Animation";
 import Title from "../../../components/title";
 import Feature from "../../../components/section3/Feature";
 

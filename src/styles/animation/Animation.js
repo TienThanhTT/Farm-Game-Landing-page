@@ -14,7 +14,7 @@ export const fadeUp = {
 };
 
 export const fadeDown = {
-  hidden: { opacity: 0, y: 10 },
+  hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: [-100, 0] },
 };
 
@@ -25,11 +25,11 @@ export const appear = {
 
 export const slideVariants = {
   hiddenRight: {
-    x: "-50%",
+    x: "-20%",
     opacity: 0,
   },
   hiddenLeft: {
-    x: "50%",
+    x: "20%",
     opacity: 0,
   },
   visible: {
@@ -37,10 +37,8 @@ export const slideVariants = {
     opacity: 1,
     transition: {
       duration: 0.5,
+      type: "spring",
+      stiffness: 300,
     },
-  },
-  exit: {
-    scale: 0,
-    transition: { duration: 1 },
   },
 };
