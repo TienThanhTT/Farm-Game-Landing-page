@@ -66,7 +66,10 @@ const Layout = [
 
 const Section6 = () => {
   return (
-    <section className=" bg-section6 bg-center bg-cover lg:h-[750px] flex flex-col ">
+    <section
+      className=" bg-section6 bg-center bg-cover lg:h-[750px] flex flex-col "
+      id="tokenomics"
+    >
       <div className="container flex flex-col justify-start items-center ">
         <div className=" -translate-y-12">
           <Title title={"Tokenomics"} />

@@ -9,6 +9,9 @@
   .font-outline-green {
     -webkit-text-stroke: 1px #2FE863;
   }
+  html{
+    @apply scroll-smooth
+  }
   
 }
 
@@ -17,7 +20,7 @@ body {
   font-family: "Rowdies", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  scroll-behavior: smooth;
 
 }
 

@@ -8,11 +8,11 @@ import { appear } from "../../styles/animation/Animation";
 
 const Header = () => {
   const NavbarItems = [
-    { name: "Overview", url: "#Overview" },
+    { name: "Overview", url: "#overview" },
     { name: "NFT Market", url: "#NFT_ITEM" },
-    { name: "White Paper", url: "#WhitePaper" },
-    { name: "Roadmap", url: "#Roadmap" },
-    { name: "Tokenomics", url: "#Tokenomics" },
+    { name: "White Paper", url: "#whitepaper" },
+    { name: "Roadmap", url: "#roadmap" },
+    { name: "Tokenomics", url: "#tokenomics" },
   ];
   const buttonUrl = "https://farms.miexs.com/";
 
@@ -31,21 +31,23 @@ const Header = () => {
     <header
       className={
         scrolled
-          ? " w-full fixed h-[100px] md:h-[150px] lg:h-[200px] z-50 lg:py-8 bg-header bg-cover"
-          : "w-full fixed h-[100px] md:h-[150px] lg:h-[200px] z-50 lg:py-8"
+          ? " w-full fixed h-[70px] lg:h-[100px] z-50 lg:py-2 bg-white"
+          : "w-full fixed h-[70px] lg:h-[100px] z-50 lg:py-2"
       }
     >
       <div className="container">
         <div className=" flex justify-between items-center py-2">
           <div className=" max-w-[60px] lg:max-w-[84px] ">
-            <img src={logo} alt="logo" loading="lazy" />
+            <a href="#hero">
+              <img src={logo} alt="logo" loading="lazy" />
+            </a>
           </div>
 
           <div className="hidden lg:flex justify-center items-center gap-8">
             {NavbarItems.map((item) => (
-              <Link href={item.url} key={item.url}>
+              <a href={item.url} key={item.url}>
                 {item.name}
-              </Link>
+              </a>
             ))}
           </div>
           <div className="hidden lg:flex">

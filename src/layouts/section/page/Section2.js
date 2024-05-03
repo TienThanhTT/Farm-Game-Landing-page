@@ -9,7 +9,7 @@ const Section2 = () => {
     <section className=" bg-section2 h-[666px] lg:h-[888px]">
       <div
         className="container h-full flex justify-center items-center"
-        id="Overview"
+        id="overview"
       >
         <motion.div
           className=" lg:bg-section2_content w-[1030px] h-[504px] relative flex flex-col lg:flex-row items-center "

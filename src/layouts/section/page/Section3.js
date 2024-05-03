@@ -48,7 +48,7 @@ const Section3 = () => {
   return (
     <section
       className=" bg-section3 bg-cover bg-center py-8 lg:h-[1107px] lg:py-0 "
-      id="WhitePaper"
+      id="whitepaper"
     >
       <div className="container flex h-full items-center">
         <div className=" flex flex-col gap-12">

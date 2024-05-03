@@ -78,7 +78,7 @@ const Section4 = () => {
   return (
     <section
       className=" bg-section4 bg-center bg-cover py-8 lg:py-0 lg:h-[1260px] flex items-center justify-center"
-      id="Roadmap"
+      id="roadmap"
     >
       <div className="container flex flex-col gap-12 ">
         <div className=" flex justify-center items-center">
